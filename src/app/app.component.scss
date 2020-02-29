@@ -1,0 +1,55 @@
+.app {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+
+  .player {
+    outline: none;
+  }
+
+  .equalizer {
+
+    .frequency-list {
+
+      .level {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+        height: 250px;
+        justify-content: space-between;
+
+        > span {
+          color: gray;
+          font-size: 12px;
+          line-height: 34px;
+        }
+      }
+
+      .title {
+        color: gray;
+        display: block;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: center;
+      }
+
+      .frequency {
+        height: 250px;
+        position: relative;
+        width: 40px;
+
+        .frequency-item {
+          position: absolute;
+          transform: rotate(270deg) translate(12px, -97px);
+          width: 230px;
+        }
+      }
+    }
+  }
+
+  .title {
+    font-size: 16px;
+  }
+}
