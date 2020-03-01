@@ -3,9 +3,13 @@
   <div class="player">
     <audio #player class="player" (playing)="play()"
            controls preload="auto"
-           src="assets/littlebig_gobananas.mp3"></audio>
+           [src]="audioSource"></audio>
   </div>
+
+  <h2 class="title">File loader</h2>
+  <app-file-loader (linkOfFile)="linkOfFile($event)"></app-file-loader>
 
   <h2 class="title">Equalizer</h2>
   <app-equalizer [player]="audio" [context]="context"></app-equalizer>
+
 </div>

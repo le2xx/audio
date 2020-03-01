@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { EqualizerComponent } from './equalizer/equalizer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FileLoaderComponent } from './file-loader/file-loader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EqualizerComponent
+    EqualizerComponent,
+    FileLoaderComponent
   ],
     imports: [
       BrowserModule,
