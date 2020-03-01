@@ -1,0 +1,31 @@
+<div class="equalizer">
+  <select class="select" (change)="setEquSettings($event)">
+    <option *ngFor="let setting of equSettings" [value]="setting.value">{{ setting.title }}</option>
+  </select>
+
+  <table class="frequency-list">
+    <tr>
+      <td class="level">
+        <span>16 -</span>
+        <span>8 -</span>
+        <span>0 -</span>
+        <span>-8 -</span>
+        <span>-16 -</span>
+      </td>
+      <td *ngFor="let item of currentEquSettings; let i = index" class="frequency">
+        <input type="range"
+               min="-16" max="16" step="0.2"
+               [(ngModel)]="item.value"
+               (change)="changeValue($event, i)"
+               class="frequency-item"/>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td *ngFor="let item of currentEquSettings">
+        <span class="title">{{ item.value }}</span>
+        <span class="title">{{ item.title }}</span>
+      </td>
+    </tr>
+  </table>
+</div>

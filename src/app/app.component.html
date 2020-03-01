@@ -1,35 +1,11 @@
 <div class="app">
+  <h2 class="title">Player</h2>
   <div class="player">
-    <h2 class="title">Player</h2>
-    <audio #player class="player" controls src="assets/littlebig_gobananas.mp3"></audio>
+    <audio #player class="player" (playing)="play()"
+           controls preload="auto"
+           src="assets/littlebig_gobananas.mp3"></audio>
   </div>
 
-  <div class="equalizer">
-    <h2 class="title">Equalizer</h2>
-    <table class="frequency-list">
-      <tr>
-        <td class="level">
-          <span>16 -</span>
-          <span>8 -</span>
-          <span>0 -</span>
-          <span>-8 -</span>
-          <span>-16 -</span>
-        </td>
-        <td *ngFor="let item of spectrumList; let i = index" class="frequency">
-          <input type="range"
-                 min="-16" max="16" step="0.2"
-                 [(ngModel)]="item.value"
-                 (change)="changeValue($event, i)"
-                 class="frequency-item"/>
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td *ngFor="let item of spectrumList">
-          <span class="title">{{ item.value }}</span>
-          <span class="title">{{ item.title }}</span>
-        </td>
-      </tr>
-    </table>
-  </div>
+  <h2 class="title">Equalizer</h2>
+  <app-equalizer [player]="audio" [context]="context"></app-equalizer>
 </div>

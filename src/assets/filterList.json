@@ -1,0 +1,173 @@
+{
+  "default": [
+    {
+      "title": "40 Гц",
+      "frequency": 40,
+      "value": 0
+    },
+    {
+      "title": "60 Гц",
+      "frequency": 60,
+      "value": 0
+    },
+    {
+      "title": "170 Гц",
+      "frequency": 170,
+      "value": 0
+    },
+    {
+      "title": "310 Гц",
+      "frequency": 310,
+      "value": 0
+    },
+    {
+      "title": "600 Гц",
+      "frequency": 600,
+      "value": 0
+    },
+    {
+      "title": "1 кГц",
+      "frequency": 1000,
+      "value": 0
+    },
+    {
+      "title": "3 кГц",
+      "frequency": 3000,
+      "value": 0
+    },
+    {
+      "title": "6 кГц",
+      "frequency": 6000,
+      "value": 0
+    },
+    {
+      "title": "12 кГц",
+      "frequency": 12000,
+      "value": 0
+    },
+    {
+      "title": "14 кГц",
+      "frequency": 14000,
+      "value": 0
+    },
+    {
+      "title": "16 кГц",
+      "frequency": 16000,
+      "value": 0
+    }
+  ],
+  "rock": [
+    {
+      "title": "40 Гц",
+      "frequency": 40,
+      "value": 8
+    },
+    {
+      "title": "60 Гц",
+      "frequency": 60,
+      "value": 6.6
+    },
+    {
+      "title": "170 Гц",
+      "frequency": 170,
+      "value": 3.2
+    },
+    {
+      "title": "310 Гц",
+      "frequency": 310,
+      "value": -2.8
+    },
+    {
+      "title": "600 Гц",
+      "frequency": 600,
+      "value": -7.6
+    },
+    {
+      "title": "1 кГц",
+      "frequency": 1000,
+      "value": -2
+    },
+    {
+      "title": "3 кГц",
+      "frequency": 3000,
+      "value": 1.2
+    },
+    {
+      "title": "6 кГц",
+      "frequency": 6000,
+      "value": 2.8
+    },
+    {
+      "title": "12 кГц",
+      "frequency": 12000,
+      "value": 3.6
+    },
+    {
+      "title": "14 кГц",
+      "frequency": 14000,
+      "value": 3.8
+    },
+    {
+      "title": "16 кГц",
+      "frequency": 16000,
+      "value": 3.8
+    }
+  ],
+  "pop": [
+    {
+      "title": "40 Гц",
+      "frequency": 40,
+      "value": -1
+    },
+    {
+      "title": "60 Гц",
+      "frequency": 60,
+      "value": 0.4
+    },
+    {
+      "title": "170 Гц",
+      "frequency": 170,
+      "value": 4.4
+    },
+    {
+      "title": "310 Гц",
+      "frequency": 310,
+      "value": 5.4
+    },
+    {
+      "title": "600 Гц",
+      "frequency": 600,
+      "value": 2.8
+    },
+    {
+      "title": "1 кГц",
+      "frequency": 1000,
+      "value": -1.4
+    },
+    {
+      "title": "3 кГц",
+      "frequency": 3000,
+      "value": -1.6
+    },
+    {
+      "title": "6 кГц",
+      "frequency": 6000,
+      "value": -1.6
+    },
+    {
+      "title": "12 кГц",
+      "frequency": 12000,
+      "value": -1
+    },
+    {
+      "title": "14 кГц",
+      "frequency": 14000,
+      "value": -1
+    },
+    {
+      "title": "16 кГц",
+      "frequency": 16000,
+      "value": -1
+    }
+  ]
+}

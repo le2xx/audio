@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { EqualizerComponent } from './equalizer/equalizer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EqualizerComponent
   ],
     imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule
+      BrowserModule,
+      AppRoutingModule,
+      FormsModule,
+      HttpClientModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
