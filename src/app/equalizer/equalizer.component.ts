@@ -23,6 +23,7 @@ export class EqualizerComponent implements AfterViewInit {
   public filters;
   public filterList;
   public currentEquSettings;
+  public selectedEquSettings: string;
   public equSettings: EquSettings[] = [
     { title: 'Без эквалайзера', value: 'default' },
     { title: 'Рок', value: 'rock' },
@@ -43,6 +44,10 @@ export class EqualizerComponent implements AfterViewInit {
 
   public changeValue(e: Event, index: number) {
     this.filters[index].gain.value = e.target['value'];
+
+    if (this.selectedEquSettings === 'my') {
+      localStorage.setItem('myEquSettings', JSON.stringify(this.currentEquSettings));
+    }
   }
 
   public updateAllFilters() {
@@ -82,13 +87,23 @@ export class EqualizerComponent implements AfterViewInit {
   }
 
   public setEquSettings(e: Event) {
-    const key = e.target['value'];
-    if (key === 'my') {
-      this.currentEquSettings = JSON.parse(JSON.stringify(this.filterList.default));
+    this.selectedEquSettings = e.target['value'];
+
+    if (this.selectedEquSettings === 'my') {
+      const myEquSettings = JSON.parse(localStorage.getItem('myEquSettings'));
+
+      if (!myEquSettings) {
+        localStorage.setItem('myEquSettings', JSON.stringify(this.filterList.default));
+        console.log(JSON.stringify(this.filterList.default));
+        this.currentEquSettings = JSON.parse(localStorage.getItem('myEquSettings'));
+      } else {
+        this.currentEquSettings = myEquSettings;
+      }
+
       this.updateAllFilters();
       return;
     }
-    this.currentEquSettings = JSON.parse(JSON.stringify(this.filterList[key]));
+    this.currentEquSettings = JSON.parse(JSON.stringify(this.filterList[this.selectedEquSettings]));
     this.updateAllFilters();
   }
 }
